@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainfont: "Montserrat", sans-serif;
+  --secondfont: "Merriweather", serif;
+  --maincolor: #292929;
+  --accent: #27ae60;
+  --title-size: 48px;
+  --subtitle-size: 24px;
+  --peregrapgh-size: 16px;
+  --main-font-color: #fff;
+  --tag-color: rgba(39, 174, 96, 20%);
+}
+
+body {
+  height: 100vh;
+  background: var(--maincolor);
+  position: relative;
+  overflow: hidden;
+}
+/* Ellipse 106 */
+
+.main-bg {
+  position: absolute;
+  width: 1000px;
+  height: 1060px;
+  left: 50%;
+  top: -800px;
+  transform: translateX(-50%);
+  background: var(--accent);
+  filter: blur(400px);
+  z-index: -1;
+}
+.glass {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, #000000a7 0%, rgba(0, 0, 0, 0.217) 100%);
+}
+
+.main-font {
+  font-family: var(--mainfont);
+  color: var(--main-font-color);
+}
+
+.peregraph,
+.link,
+.button {
+  font-family: var(--mainfont);
+}
+
+header {
+  width: 100%;
+}
+
+.green {
+  position: absolute;
+  z-index: 1;
+}
+
+.green img {
+  width: 100%;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 128px;
+  z-index: 100;
+}
+
+.logo img {
+  width: 112px;
+  height: 36px;
+}
+
+.right {
+  width: 132px;
+}
+
+.title {
+  font-family: var(--secondfont);
+  font-size: var(--title-size);
+}
+
+.standart-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.standart-flex-column {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.standart-grid-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
