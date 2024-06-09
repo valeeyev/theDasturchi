@@ -1,3 +1,4 @@
+@import url(../../assets/fonts/ClashDisplay_Complete/Fonts/WEB/css/clash-display.css);
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
@@ -5,19 +6,37 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+@font-face {
+  font-family: "Clash";
+  src: url(../../assets/fonts/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Regular.eot);
+}
 :root {
+  --clash-extra-light: ClashDisplay-Extralight;
+  --clash-light: ClashDisplay-Light;
+  --clash-regular: ClashDisplay-Regular;
+  --clash-medium: ClashDisplay-Medium;
+  --clash-semibold: ClashDisplay-Semibold;
+  --clash-bold: ClashDisplay-Bold;
+  --clash-var: ClashDisplay-Variable;
+
   --mainfont: "Montserrat", sans-serif;
   --secondfont: "Merriweather", serif;
+  --clash-reg: "Clash";
   --maincolor: #292929;
   --accent: #27ae60;
+  --heading--size: 64px;
   --title-size: 48px;
   --subtitle-size: 24px;
   --peregrapgh-size: 16px;
   --main-font-color: #fff;
   --tag-color: rgba(39, 174, 96, 20%);
 }
-
+.disable {
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
 body {
   height: 100vh;
   background: var(--maincolor);
@@ -56,6 +75,9 @@ body {
 .button {
   font-family: var(--mainfont);
 }
+.btn-regular {
+  background-color: #212121;
+}
 
 header {
   width: 100%;
@@ -86,10 +108,26 @@ header {
 .right {
   width: 132px;
 }
-
+.language {
+  font-size: var(--subtitle-size);
+  font-family: var(--clash-medium);
+}
 .title {
-  font-family: var(--secondfont);
-  font-size: var(--title-size);
+  font-family: var(--clash-medium);
+  font-size: var(--heading--size);
+  color: var(--main-font-color);
+}
+
+.hero {
+  width: 1184px;
+  padding-top: 7rem;
+  line-height: 1;
+  margin: 0 auto;
+  position: absolute;
+  top: 60px;
+  right: 12%;
+  text-align: center;
+  z-index: 10;
 }
 
 .standart-flex {
@@ -110,4 +148,21 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
 }
