@@ -1,4 +1,4 @@
-@import url(../../assets/fonts/ClashDisplay_Complete/Fonts/WEB/css/clash-display.css);
+@import url(../assets/fonts/ClashDisplay_Complete/Fonts/WEB/css/clash-display.css);
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
@@ -230,19 +230,19 @@ header {
 
 .hero {
   opacity: 0;
-  animation: fadeInUp 0.5s ease-out forwards;
+  animation: fadeInUp 1.5s ease-out forwards;
 }
 
 .container.hide {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
 }
 
 .nav-container {
   display: none;
   opacity: 0;
   background-color: var(--maincolor);
-  transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  transition: opacity 1.5s ease-in-out, background-color 1.5s ease-in-out;
 }
 
 .navlinks {
@@ -254,7 +254,7 @@ header {
   font-family: var(--clash-semibold);
   gap: 27px;
   font-size: 48px;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
   opacity: 0;
   z-index: 100;
 }

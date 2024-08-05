@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='assets/images/image.png') }}"
+      type="image/x-icon"
+    />
+    <title>The Dasturchi</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='CSS/styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='CSS/links.css') }}"
+    />
+    <script src="{{ url_for('static', filename='JS/main.js') }}" defer></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="main-bg"></div>
+      <div class="glass"></div>
+      <div class="navbar standart-flex">
+        <div class="logo">
+          <a href="#"
+            ><img
+              src="{{ url_for('static', filename='assets/images/the dasturchi.svg') }}"
+              alt=""
+          /></a>
+        </div>
+        <div class="right standart-flex">
+          <a
+            href="{{ url_for('change_language', lang='uz') }}"
+            class="language main-font {% if language == 'uz' %}disable{% endif %}"
+            name="language"
+            >UZ</a
+          >
+          <a
+            href="{{ url_for('change_language', lang='en') }}"
+            class="language main-font {% if language == 'en' %}disable{% endif %}"
+            name="language"
+            >EN</a
+          >
+          <div class="toggle standart-flex" id="menubar">
+            <img
+              src="{{ url_for('static', filename='assets/images/Frame 294.svg') }}"
+              alt="links"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="hero title">
+        {% if language == 'uz' %} Bu yerda siz CS muammolari, bloglar, loyihalar
+        bo'yicha yechimlarni topishingiz mumkin. {% else %} Here you can find
+        solutions for CS problems, blogs, projects. {% endif %}
+        <div class="btn-group">
+          <button class="btn-regular">
+            <img
+              src="{{ url_for('static', filename='assets/icons/down.svg') }}"
+              alt=""
+            />
+            {%if language == 'uz'%}CVni yuklash {%else %}Download CV{%endif%}
+          </button>
+          <button>Proyektlarni ko'rish</button>
+        </div>
+      </div>
+    </div>
+    <nav id="nav-container" class="nav-container">
+      <div class="navlinks">
+        <a href="#home">Home</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#projects">Projects</a>
+        <a href="#contacts">Contacts</a>
+        <div class="line"></div>
+        <div class="socials">
+          <a title="Github" href="#github">
+            <img
+              src="{{ url_for('static', filename='assets/icons/github.svg') }}"
+              alt="github"
+            />
+          </a>
+          <a title="Telegram" href="#telegram">
+            <img
+              src="{{ url_for('static', filename='assets/icons/telegram.svg') }}"
+              alt="telegram"
+            />
+          </a>
+          <a title="Facebook" href="#facebook">
+            <img
+              src="{{ url_for('static', filename='assets/icons/facebook.svg') }}"
+              alt="facebook"
+            />
+          </a>
+          <a title="Linkedin" href="#linkedin">
+            <img
+              src="{{ url_for('static', filename='assets/icons/linkedin.svg') }}"
+              alt="linkedin"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
